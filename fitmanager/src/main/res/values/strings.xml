@@ -1,0 +1,106 @@
+<resources>
+    <string name="app_name">Fit Manager</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="login">로그인</string>
+    <string name="coachName"> </string>
+    <string name="feedtitle">님의 식단소식</string>
+    <string name="videofeedtitle">님의 운동영상</string>
+
+    <string name="blackfast">아침</string>
+    <string name="lunch">점심</string>
+    <string name="dinner">저녁</string>
+    <string name="dessert">간식</string>
+
+
+    <string name="breakfast">님의 식단 소식</string>
+    <string name="txt_coach_list_count">검색된 코치 리스트 %1$d/%2$d명</string>
+
+    <string name="notification_id">fitmanager_channel_id</string>
+    <string name="notification_name">fitmanager_channel_name</string>
+
+    <string name="dummy_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</string>
+
+    <!---->
+
+    <string name="home">홈</string>
+    <string name="menu_2">Menu 2</string>
+    <string name="mypage">마이페이지</string>
+    <string name="menu_4">Menu 4</string>
+    <string name="menu_5">Menu 5</string>
+    <string name="str_no">NO</string>
+    <string name="facebook_app_id">1758671631129511</string>
+    <string name="kakao_app_id">b7813d6607a15f5808fc5fbcd844bc9a</string>
+    <string name="fb_login_protocol_scheme">fb227500014424742</string>
+    <string name="str_email">이메일</string>
+    <string name="msg_push_emailAddress">이메일을 입력해주세요</string>
+    <string name="msg_input_password_re">비밀번호 확인</string>
+    <string name="str_dummy_id">a@a.com</string>
+    <string name="str_name">이름</string>
+    <string name="str_coach">코치</string>
+    <string name="str_nickname">닉네임</string>
+    <string name="str_company">소속</string>
+    <string name="str_search_coach_result">검색된 코치 리스트 </string>
+    <string name="str_dummy_pw">1234</string>
+    <string name="str_password">Password</string>
+    <string name="str_login">로그인</string>
+    <string name="str_signup_">가입하기</string>
+    <string name="str_signup">지금 가입하러가기</string>
+    <string name="str_signup_agree">회원가입을 하시면 약관에 동의하시는 것으로 간주됩니다.</string>
+    <string name="str_kakao_login">카카오톡 로그인</string>
+    <string name="str_fb_login">페이스북 로그인</string>
+    <string name="msg_input_password">비밀번호를 입력하세요.</string>
+    <string name="msg_push_name">이름을 작성해주세요.</string>
+    <string name="str_notice">Notice</string>
+    <string name="str_confirm">CHECK</string>
+    <string name="str_yes">YES</string>
+    <string name="msg_confirm_profile_password">비밀번호를 다시 확인해주세요.</string>
+    <string name="str_pw_forget">비밀번호를 잊으셨나요?</string>
+    <string name="str_sns_login_start">SNS계정으로 시작하기</string>
+    <string name="str_auto_login">자동로그인</string>
+    <string name="str_video_empty">현재 등록된 동영상이 없습니다</string>
+    <string name="str_exercise_intensity">운동 강도</string>
+    <string name="str_video_title">제목</string>
+    <string name="str_comment_title">댓글제목</string>
+    <string name="str_bodyPart_02">바디파트02</string>
+    <string name="str_bodyPart_01">바디파트01</string>
+    <string name="str_exercisetype">필라테스</string>
+    <string name="str_date">0000-00-00</string>
+    <string name="str_more">...더보기</string>
+    <string name="str_content">내용</string>
+    <string name="str_comment_content">댓글내용</string>
+    <string name="str_mycomment">님의 식단에 댓글을 남겼습니다.</string>
+    <string name="error_try_catch_retry">에러입니다.\n재시도할까요?</string>
+    <string name="msg_not_notice">공지사항이 없습니다.</string>
+    <string name="error_else_retry">요청한 작업에 실패하였습니다. 재시도할까요?</string>
+
+    <!--<string name="nav_action_posts">Posts</string>-->
+    <string name="nav_action_photos">Photos</string>
+    <string name="open_drawer">Open drawer</string>
+    <string name="close_drawer">Close drawer</string>
+    <string name="empty_list">No Data found !</string>
+    <string name="app_developer_name">TheLittleNaruto</string>
+    <string name="title_activity_comments">Comments</string>
+
+
+    <!-- Common Error -->
+    <string name="error_ecom01">사용자 정보를 확인하지 못하였습니다.</string>
+    <string name="error_ecom02">수신자 정보를 확인하지 못하였습니다.</string>
+    <string name="error_e00">요청한 작업에 실패하였습니다.</string>
+    <string name="error_e001">사용자 정보를 확인하지 못하였습니다.</string>
+    <string name="error_e002">상점 정보를 확인하지 못하였습니다.</string>
+    <string name="error_e003">이메일 or 핸드폰번호가 중복입니다.</string>
+    <string name="error_e004">해당 ID가 존재하지 않습니다.</string>
+
+
+    <string name="str_unknowability">알수없음</string>
+    <string name="msg_quest_patch">최신버전으로 업데이트하시겠습니까?</string>
+    <string name="msg_check_mobile_use_agree">3G/LTE등으로 재생시 \n데이터 사용로가 발생 할 수 있습니다</string>
+
+    <string name="str_cancel">취소</string>
+    <string name="msg_not_internet">인터넷이 연결되지 않았습니다.</string>
+    <string name="default_notification_channel_id">FITMANAGER_DEFAULT_CHANNEL</string>
+    <string name="title_activity_meal_insert">MealInsertActivity</string>
+
+
+</resources>

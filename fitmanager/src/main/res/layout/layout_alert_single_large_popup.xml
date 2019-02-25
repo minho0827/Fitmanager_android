@@ -1,0 +1,60 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="286dp"
+    android:layout_height="160dp"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <!-- 컨텐츠 공간 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- 컨텐츠 내용 1 -->
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/txtMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|top"
+            android:textColor="@color/C_84888C"
+            android:textSize="17dp"
+            app:fontPath="fonts/NanumSquareOTFBold.otf"/>
+
+        <!-- 컨텐츠 내용 2 -->
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/txtMessage_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:textColor="@color/C_84888C"
+            android:textSize="12dp"
+            app:fontPath="fonts/NanumSquareOTFBold.otf"/>
+    </LinearLayout>
+
+    <!-- 버튼 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal">
+
+        <!-- 예 -->
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/btnOk"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/C_91C200"
+            android:gravity="center"
+            android:text="@string/str_confirm"
+            android:textColor="@drawable/drawable_alert_button_text_color"
+            android:textSize="17.5dp"
+            android:visibility="gone"
+            app:fontPath="fonts/NanumSquareOTFRegular.otf"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item
+        android:id="@+id/video"
+        android:orderInCategory="200"
+        android:title="비디오"
+        android:icon="@drawable/video_gray"
+        app:showAsAction="ifRoom"
+        ></item>
+
+    <item
+        android:id="@+id/instagram"
+        android:orderInCategory="200"
+        android:title="인스타그램"
+        android:icon="@drawable/insta"
+        app:showAsAction="ifRoom"
+        ></item>
+    <!--<item-->
+        <!--android:id="@+id/call"-->
+        <!--android:orderInCategory="100"-->
+        <!--android:title="연락하기"-->
+        <!--android:icon="@drawable/bookmark"-->
+        <!--app:showAsAction="never" />-->
+
+
+</menu>

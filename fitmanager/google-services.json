@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "126505159305",
+    "firebase_url": "https://fitmanager-158323.firebaseio.com",
+    "project_id": "fitmanager-158323",
+    "storage_bucket": "fitmanager-158323.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:126505159305:android:463601aa6663c9c6",
+        "android_client_info": {
+          "package_name": "com.fitmanager.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "126505159305-bl14hlpon6plnhcrucq5hrrfg9e1q2qd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAe0iQzOtuV4KALiVbeKyxoxYqTAsKn_4Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

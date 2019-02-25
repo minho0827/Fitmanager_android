@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_gravity="top"
+            android:orientation="horizontal">
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_mealtype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/xml_colorbg_cyan"
+                android:gravity="center_vertical"
+                android:paddingLeft="14dp"
+                android:paddingTop="@dimen/feedFeedImgpaddingtop"
+                android:paddingRight="14dp"
+                android:paddingBottom="@dimen/feedFeedImgpaddingbottom"
+                android:textColor="@color/drawerArrowColor"
+                android:textSize="13dp"
+                android:visibility="visible"
+                app:fontPath="fonts/NanumSquareOTFRegular.otf" />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                app:fontPath="fonts/NanumSquareOTFRegular.otf" />
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/img_detail_mealview"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:layout_marginTop="5dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+
+            <include layout="@layout/include_comment_bookmark" />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/bookmark_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="50"
+                android:textSize="15dp"
+                app:fontPath="fonts/NanumSquareOTFRegular.otf" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/lineView"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:id="@+id/img_profile"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="12dp"
+                android:text="아보카드 샌드위치 입니다."
+                android:textColor="#000000"
+                app:fontPath="fonts/NanumSquareOTFRegular.otf" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_buy"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:background="@color/maincolor"-->
+        <!--android:gravity="center"-->
+        <!--android:text="장바구니에담기"-->
+        <!--android:textColor="@color/white" />-->
+    </LinearLayout>
+
+
+</FrameLayout>

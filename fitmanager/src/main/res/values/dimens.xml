@@ -1,0 +1,51 @@
+<resources>
+    <dimen name="feedFeedImgpaddingtop">2dp</dimen>
+    <dimen name="feedFeedImgpaddingbottom">2dp</dimen>
+
+    <dimen name="feedTextIcon_vertical_margin">7dp</dimen>
+
+    <dimen name="detail_backdrop_height">256dp</dimen>
+    <dimen name="bookmark_vertical_margin">300dp</dimen>
+    <dimen name="fab_scroll_threshold">4dp</dimen>
+
+    <dimen name="card_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="list_item_avatar_size">40dp</dimen>
+    <dimen name="spacing_normal">16dp</dimen>
+    <dimen name="image_width">120dp</dimen>
+    <dimen name="search_box_left_padding">8dp</dimen>
+    <dimen name="search_box_right_padding">8dp</dimen>
+    <dimen name="search_box_icon_size">24dp</dimen>
+    <dimen name="search_box_icon_margin">4dp</dimen>
+    <dimen name="search_box_search_icon_padding">2dp</dimen>
+    <dimen name="search_collapsed_text_size">14sp</dimen>
+    <dimen name="search_box_text_left_margin">8dp</dimen>
+    <dimen name="search_text_size">20sp</dimen>
+    <dimen name="profileMarginLeft">20dp</dimen>
+    <dimen name="profileMarginTop">12dp</dimen>
+    <dimen name="profileRowTextSize">25sp</dimen>
+    <dimen name="profileLowHorizontal">110dp</dimen>
+    <dimen name="profileLowHorizontal_MinMargin">10dp</dimen>
+    <dimen name="profileLowVertical">10dp</dimen>
+
+    <dimen name="tabsHeight">48dp</dimen>
+
+
+    <dimen name="materialviewpager_logoHeight">35dp</dimen>
+    <dimen name="image_small_width">32dp</dimen>
+    <dimen name="image_final_width">32dp</dimen>
+    <dimen name="padding_small">4dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="cardMarginVertical">10dp</dimen>
+    <dimen name="cardMarginHorizontal">20dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+
+    <dimen name="common_button_height">44dp</dimen>
+    <dimen name="common_margin_left_17dp">17dp</dimen>
+    <dimen name="common_margin_right_17dp">17dp</dimen>
+
+</resources>

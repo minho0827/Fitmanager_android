@@ -1,0 +1,96 @@
+<!-- PasswordSearchActivity -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <!-- Top area -->
+    <include layout="@layout/layout_top_area"/>
+
+    <!-- 공지사항 컨텐츠 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 공지사항 제목 및 시간 레이아웃 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:orientation="vertical">
+
+            <!-- View 위치 변환을 위한 RelativeLayout -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- 제목 -->
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txt_notice_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/common_margin_left_17dp"
+                    android:layout_marginRight="@dimen/common_margin_right_17dp"
+                    android:gravity="center"
+                    android:textColor="@color/C_000000"
+                    android:textSize="12dp"
+                    app:fontPath="fonts/NanumSquareOTFBold.otf"/>
+
+                <!-- 시간 -->
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txt_notice_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/txt_notice_title"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="@dimen/common_margin_right_17dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center|right"
+                    android:textColor="@color/C_000000"
+                    android:textSize="8.5dp"
+                    app:fontPath="fonts/NanumSquareOTFLight.otf"/>
+            </RelativeLayout>
+
+            <!-- 구분선 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/C_A5A9AC"/>
+
+        </LinearLayout>
+
+        <!-- 공지사항 내용 레이아웃 -->
+        <ScrollView
+            android:id="@+id/fullScroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <!-- ScollView가 담고 있는 필수 레이아웃 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- 공지사항 내용 -->
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txt_notice_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/common_margin_left_17dp"
+                    android:textColor="@color/C_000000"
+                    android:textSize="12dp"
+                    app:fontPath="fonts/NanumSquareOTFRegular.otf"/>
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

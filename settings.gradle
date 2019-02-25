@@ -1,0 +1,7 @@
+include ':fitmanager'
+//include ':googlemediaframework'
+//include ':googlemediaframework'
+
+//project(':searchlibrary').projectDir=new File('/Users/Home/Desktop/FitManager_App/searchlibrary')
+
+

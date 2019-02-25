@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/Home/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.3.0/2b802460eea20f8f2ad9c08c74e0f14718e88aa9/okhttp-3.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2b802460eea20f8f2ad9c08c74e0f14718e88aa9">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/okhttp-3.3.0_754d571085bb4d31416bdf525df1ad34f6493286.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/exploded-aar/fr.avianey.com.viewpagerindicator/library/2.4.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="bae64da9140d1e78edb6f28a1b4c8831aac4ab88">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/fr.avianey.com.viewpagerindicator-library-2.4.1.1_32f094a4366aada76bf30385b90116b0b9988b61.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.5/6c6c702c89bfff3cd9e80b04d668c5e190d588c6/commons-lang3-3.5.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6c6c702c89bfff3cd9e80b04d668c5e190d588c6">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/commons-lang3-3.5_9f0317e3483e026e9628a9873a424085b606e7fb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/converter-gson-2.1.0_50c9cb32dc57572a494c589b9d5c3a7a66e2b48a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/glide-3.7.0_706abdf690ad0cdb47ab51d72aaf17bf696e52c1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.1.0/2de7cd8b95b7021b1d597f049bcb422055119f2c/retrofit-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/retrofit-2.1.0_92d6bdbebf36cd1d88cd4dee0902fe8dd225e296.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/exploded-aar/jp.wasabeef/glide-transformations/2.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="df451c6f391e3e32022fc964ed87bd57a5869128">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/jp.wasabeef-glide-transformations-2.0.1_8ac14d524c9507f8d28d240ad47ecebbd1b2a9b3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.4.0_ab048e25994f0c8aa20208bfe00e984f151bd42d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-collections4/4.1/a4cf4688fe1c7e3a63aa636cc96d013af537768e/commons-collections4-4.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a4cf4688fe1c7e3a63aa636cc96d013af537768e">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/commons-collections4-4.1_af06e2c01635052150e2823b50e44c0f8d69945d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.4.0_5d16d605bb9d3ca2389491cbaa49ffa4a72b2a26.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/gson-2.7_93449e82f7d6a07c6e455d9d32582ea7b91f3fd3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-s3/2.4.7/57cfc81d61d8dc815165da243506aab772e56f39/aws-android-sdk-s3-2.4.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="57cfc81d61d8dc815165da243506aab772e56f39">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/aws-android-sdk-s3-2.4.7_5224a79d47fdd226ad0f47c9c241637e402749b7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.4.0_b789050eefff2ffb942f7067bb4e01034a6191da.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_616a101ce34dee8147cd4528434d83573b64ceed.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-8.4.0_9ddb4c4b3dcb221aa089a4b8c5478c7b01865fd1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-core/2.4.7/e6942ca3818c756be3370fb9ff643dbe08297201/aws-android-sdk-core-2.4.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e6942ca3818c756be3370fb9ff643dbe08297201">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/aws-android-sdk-core-2.4.7_e471315f5ad3b9ee72a661a28ad730349f9a054b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.1/support-annotations-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/support-annotations-25.0.1_0a16863cd94366eb8361acd221c0089b34a7d7f2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/butterknife-7.0.1_bf87b76c64b39800329c5b36d32dba6ead4cec34.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/exploded-aar/at.blogc/expandabletextview/1.0.3/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ef04608d24a0788c83950359e7755d4d0c03c558">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/at.blogc-expandabletextview-1.0.3_f5a0ab698c7e8cacf77c653ab54adf3b710ab68e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/exploded-aar/com.android.support/design/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/com.android.support-design-23.4.0_795f91c303037be943dc5f14a856cad3120aa5ed.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.9.7/6eb2e87ddb09e944bb88f06f19ba0638d4607ffd/joda-time-2.9.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6eb2e87ddb09e944bb88f06f19ba0638d4607ffd">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/joda-time-2.9.7_b2cf2f53580f82efa7908a6217d8992ad2f42cc4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r2.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="31ead391552fc8d93a7b87b0f15e83755b908904">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/com.google.android.exoplayer-exoplayer-r2.2.0_725d3f9412acd4e118ba52fdba8c0df5382afcd1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/2.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a2af9c72ccaa4c5c049b500ca6ea664a4ce1f7d4">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/de.hdodenhof-circleimageview-2.1.0_060ace8dfd5475b78f5ab69b8640e2db2a355272.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.4.0_71804cd58a21c65d559472aa6e39c688d82d2750.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-appindexing-8.4.0_52ecd41a081aee27dc9872e1bc30f6522f57e60b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.4.0_b5ebc896722554b3771977cdf49b7ea72c536233.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-kms/2.4.7/10cee1737b322f4c23b4958444922ea351ae3671/aws-android-sdk-kms-2.4.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="10cee1737b322f4c23b4958444922ea351ae3671">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/aws-android-sdk-kms-2.4.7_68240297854b7780d3576ac6b1485cd14e8aacf0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/exploded-aar/FitManager_App/searchlibrary/unspecified/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a8f8965bc57239b775a375cef6f987af81d960fe">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/FitManager_App-searchlibrary-unspecified_069eb8eca3f9eeb28a8bff23e3c28f8e3a0f97ca.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.3.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="82ce13fd19cdfde0e392f03c27edeba8d4333648">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.3.0_8c48ba15e8c3cb2d7ff5e4521bd9218293f81b7f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.8.0/5ea7af56cc7c567ed9856d99efb30740e9b17ff/okio-1.8.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/okio-1.8.0_058efbd6e44eee82cddbb2396e6e426e4ceb37f4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/exploded-aar/com.github.rey5137/material/1.2.2/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="dde1ea8573633db3da4e8c42d541bfa7d03d6720">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/com.github.rey5137-material-1.2.2_4846221bd20f1256401e50925ebb0b371a93dcac.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="/Users/Home/Desktop/FitManager_App/fitmanager/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-8.4.0_f80e7a8616d4356b5a1dc0c92157ae7d979de175.jar" />
+    </item>
+
+</items>

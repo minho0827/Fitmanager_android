@@ -1,0 +1,66 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="286dp"
+    android:layout_height="352dp"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <!-- ScrollView -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <!-- ScollView가 담고 있는 필수 레이아웃 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- 컨텐츠 내용 1 -->
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/txtMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textColor="@color/C_000000"
+                android:textSize="16dp"
+                app:fontPath="fonts/NanumSquareOTFBold.otf"/>
+
+            <!-- 컨텐츠 내용 2 -->
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/txtMessage_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center|left"
+                android:lineSpacingExtra="5dp"
+                android:textColor="@color/C_84888C"
+                android:textSize="11dp"
+                app:fontPath="fonts/NanumSquareOTFBold.otf"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 버튼 -->
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/btnOk"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/C_91C200"
+        android:gravity="center"
+        android:text="@string/str_confirm"
+        android:textColor="@drawable/drawable_alert_button_text_color"
+        android:textSize="17.5dp"
+        android:visibility="visible"
+        app:fontPath="fonts/NanumSquareOTFRegular.otf"/>
+
+</LinearLayout>

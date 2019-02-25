@@ -1,0 +1,77 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_top_area"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/maincolor"
+    android:elevation="8dp"
+    android:orientation="horizontal">
+
+    <!-- Back 이미지 -->
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/iv_back"
+        android:layout_width="12dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="@dimen/common_margin_left_17dp"
+        android:layout_marginTop="15dp"
+        android:contentDescription="@null"
+        android:src="@drawable/back_btn"
+        android:visibility="invisible"/>
+
+    <!-- 빈 공간 -->
+    <RelativeLayout
+        android:id="@+id/layout_back"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true">
+    </RelativeLayout>
+
+    <!-- LinearLayout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- OTR TextView :: 상단 중간 제목 -->
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/txt_centerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/title_text_color"
+            android:textSize="18dp"
+            app:fontPath="fonts/NanumSquareOTFRegular.otf"/>
+    </LinearLayout>
+
+    <!-- refresh 이미지 -->
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/iv_refresh"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/common_margin_left_17dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@null"
+        android:visibility="invisible"/>
+
+    <!-- completion 이미지 -->
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/iv_completion"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/common_margin_left_17dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@null"
+        android:visibility="invisible"/>
+
+    <!-- 빈 공간 -->
+    <RelativeLayout
+        android:id="@+id/layout_refresh"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

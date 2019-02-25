@@ -1,0 +1,471 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:text="허벅지,종아리 집중공략 슬림하체만들기"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/play_button" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_hit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="1"
+            android:textColor="@color/darkgray"
+            android:textSize="16dp" />
+
+
+        <LinearLayout
+            android:id="@+id/linear_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <ImageButton
+                android:id="@+id/btn_comment"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/comment"
+                android:clickable="false" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/comment_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:clickable="false"
+                android:text="13"
+                android:textColor="@color/darkgray"
+                android:textSize="16dp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linear_video_bookmark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <ImageButton
+                android:id="@+id/btn_video_bookmark"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bookmark_star"
+                android:clickable="false" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_video_bookmark_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:clickable="false"
+                android:text="13"
+                android:textColor="@color/darkgray"
+                android:textSize="16dp" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_light" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="20dp">
+
+        <ImageView
+            android:id="@+id/img_profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fontPath="fonts/NanumSquareOTFBold.otf"
+                android:text="양정원"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/coach_bookmark_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_weight="0.2"
+                app:fontPath="fonts/NanumSquareOTFBold.otf"
+                android:text="2,340명"
+                android:textSize="13dp" />
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frame_layout_bookmark"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp">
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_coach_bookmark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/xml_colorbg_purple_radius"
+                app:fontPath="fonts/NanumSquareOTFBold.otf"
+                android:gravity="center_vertical"
+                android:paddingLeft="30dp"
+                android:paddingTop="4dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="4dp"
+                android:text="구독중"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:visibility="gone" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/icon_bookmark_checek"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/check"
+                app:fontPath="fonts/NanumSquareOTFBold.otf"
+                android:gravity="center_vertical"
+                android:visibility="gone" />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_not_coach_bookmark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/xml_purple_stroke"
+                app:fontPath="fonts/NanumSquareOTFBold.otf"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingTop="4dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="4dp"
+                android:text="+ 구독"
+                android:textColor="@color/maincolor"
+                android:textSize="15dp"
+                android:visibility="visible" />
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_light" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/cardMarginHorizontal"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:text="운동 정보"
+            android:textColor="@color/darkgray"
+            />
+
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/cardMarginHorizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="@dimen/cardMarginHorizontal"
+        android:layout_marginBottom="@dimen/cardMarginVertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="난이도:"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/img_level_01"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/dumbell" />
+
+                <ImageView
+                    android:id="@+id/img_level_02"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/dumbell" />
+
+                <ImageView
+                    android:id="@+id/img_level_03"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/dumbell" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    app:fontPath="fonts/NanumSquareOTFBold.otf"
+                    android:text="운동종류:"
+                    android:textColor="@color/darkgray"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_exercisetype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    app:fontPath="fonts/NanumSquareOTFBold.otf"
+                    android:text="근력향상"
+                    android:textColor="@color/darkgray"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    app:fontPath="fonts/NanumSquareOTFBold.otf"
+                    android:text="운동부위:"
+                    android:textColor="@color/darkgray"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_bodytype01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/maincolor"
+                    app:fontPath="fonts/NanumSquareOTFBold.otf"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="체형교정"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_bodytype02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/maincolor"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="체형교정"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal">
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:text="운동팁:"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    app:fontPath="fonts/NanumSquareOTFBold.otf" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:text="설명입니다"
+                    android:textSize="15dp"
+                    app:fontPath="fonts/NanumSquareOTFBold.otf" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="40dp">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_recommend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/cardMarginHorizontal"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:text="추천 동영상"
+            android:textColor="@color/darkgray"
+            android:visibility="visible" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
+

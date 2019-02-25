@@ -1,0 +1,76 @@
+<!-- 공지사항 Header -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/C_FFFFFF"
+    android:orientation="vertical">
+
+    <!-- 공지사항 레이아웃 -->
+    <RelativeLayout
+        android:id="@+id/layout_notice_box"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:orientation="horizontal">
+
+        <!-- 아이콘 레이아웃-->
+        <LinearLayout
+            android:id="@+id/layout_notice_icon"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@color/C_DC1313"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:contentDescription="@null"
+                android:background="@drawable/check"/>
+        </LinearLayout>
+
+        <!-- 공지사항 제목 및 시간 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/layout_notice_icon">
+
+            <!-- 제목 -->
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/txt_notice_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/common_margin_left_17dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/C_000000"
+                android:textSize="12dp"
+                app:fontPath="fonts/NanumSquareOTFBold.otf"/>
+
+            <!-- 시간 -->
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/txt_notice_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="7.5dp"
+                android:layout_marginRight="@dimen/common_margin_right_17dp"
+                android:textColor="@color/C_000000"
+                android:textSize="8.5dp"
+                app:fontPath="fonts/NanumSquareOTFRegular.otf"/>
+        </RelativeLayout>
+
+        <!-- 구분선 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/C_A5A9AC"/>
+    </RelativeLayout>
+
+</LinearLayout>

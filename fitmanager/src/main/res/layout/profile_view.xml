@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/activity_coach">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbarCollapse"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|snap">
+
+            <FrameLayout
+                android:id="@+id/frame_main"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+
+                <LinearLayout
+                    android:id="@+id/linear_01"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/btn_bookmark_num_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img_bookmark_small"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="35dp"
+                            android:layout_marginBottom="30dp"
+                            android:text="10"
+                            android:textColor="#000000"
+                            android:textSize="10dp"
+                            app:fontPath="fonts/NanumSquareOTFBold.otf" />
+
+
+                        <ImageView
+                            android:id="@+id/img_bookmark_small"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="35dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/purple_star" />
+
+                        <ImageView
+                            android:id="@+id/img_profile"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                             />
+                    </FrameLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="28dp"
+                            android:text="@string/coachName"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            app:fontPath="fonts/NanumSquareOTFBold.otf" />
+
+
+                        <ImageButton
+                            android:id="@+id/btn_info"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/info" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_height"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="2.5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="2.5dp"
+                            android:textColor="#ffffff"
+                            android:textSize="10sp"
+                            app:fontPath="fonts/NanumSquareOTFBold.otf" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_weight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="2dp"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="2.5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="2.5dp"
+                            android:textColor="#ffffff"
+                            android:textSize="10sp"
+                            app:fontPath="fonts/NanumSquareOTFBold.otf" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_exercisetype"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="2.5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="2.5dp"
+                            android:textColor="#ffffff"
+                            android:textSize="10sp"
+                            app:fontPath="fonts/NanumSquareOTFBold.otf" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_company"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2.5dp"
+                            android:layout_toRightOf="@+id/tv_job"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="2.5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="2.5dp"
+                            android:textColor="#ffffff"
+                            android:textSize="10sp"
+                            app:fontPath="fonts/NanumSquareOTFBold.otf" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fontPath="fonts/NanumSquareOTFBold.otf"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|snap"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/maincolor"
+            app:tabIndicatorColor="@color/white"
+            app:tabIndicatorHeight="3dp"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@android:color/black"
+            app:fontPath="fonts/NanumSquareOTFBold.otf"/>
+        />
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:swipeable="false" />
+
+
+</android.support.design.widget.CoordinatorLayout>

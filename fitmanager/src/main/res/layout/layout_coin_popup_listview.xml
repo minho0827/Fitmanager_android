@@ -1,0 +1,72 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/C_A1060404">
+
+        <RelativeLayout
+            android:layout_width="275dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            >
+
+            <!-- 타이틀 공간 -->
+            <LinearLayout
+                android:id="@+id/layout_popup_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="25dp">
+
+                <!-- 타이틀 제목 -->
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txt_popup_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/C_84888C"
+                    android:textSize="19dp"
+                    app:fontPath="fonts/NanumSquareOTFBold.otf"/>
+
+            </LinearLayout>
+
+            <!-- 리스트 -->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/lv_coinList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/btn_back_popup"
+                android:layout_below="@+id/layout_popup_title"
+                android:layout_marginTop="17dp"
+                android:divider="@null"
+                android:dividerHeight="0dp"/>
+
+            <!-- 뒤로가기 버튼 -->
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/btn_back_popup"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/C_DC1313"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:textColor="@color/C_FFFFFF"
+                android:textSize="13dp"
+                app:fontPath="fonts/NanumSquareOTFBold.otf"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

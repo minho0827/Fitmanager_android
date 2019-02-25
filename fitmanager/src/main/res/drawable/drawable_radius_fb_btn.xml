@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 전체 배경 색상 -->
+    <solid android:color="@color/fb_color"/>
+
+    <!-- 레이아웃 안쪽으로 색상과 길이 설정 -->
+    <stroke android:width="0px" android:color="@color/C_FFFFFF"/>
+
+    <!-- 모서리 코너가 둥글게 되는 길이 설정 -->
+    <corners android:radius="16px"/>
+
+    <!-- padding -->
+    <padding android:left="0dp" android:right="0dp" android:top="0dp" android:bottom="0dp"/>
+
+</shape>

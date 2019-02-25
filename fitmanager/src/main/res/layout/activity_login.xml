@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/maincolor">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical"
+        android:paddingTop="50dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="15dp"
+            android:layout_weight="0.9"
+            android:gravity="center"/>
+
+        <!-- 아이디 -->
+        <FrameLayout
+            android:id="@+id/layout_id"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginLeft="@dimen/common_margin_left_17dp"
+            android:layout_marginRight="@dimen/common_margin_right_17dp"
+            android:background="@drawable/drawable_radius_login_logout">
+
+            <!-- 아이디 아이콘 -->
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="27dp"
+                android:layout_gravity="center|left"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/img_profile" />
+
+            <!-- 아이디 입력 공간 -->
+            <EditText
+                android:id="@+id/et_emailID"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:hint="@string/str_email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:text="@string/str_dummy_id"
+                android:textColor="@color/C_FFFFFF"
+                android:textColorHint="@color/C_FFFFFF"
+                android:textSize="17.5dp" />
+        </FrameLayout>
+
+        <!-- 패스워드 -->
+        <FrameLayout
+            android:id="@+id/layout_passwrod"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_below="@+id/layout_id"
+            android:layout_marginLeft="@dimen/common_margin_left_17dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="@dimen/common_margin_right_17dp"
+            android:background="@drawable/drawable_radius_login_logout">
+
+            <!-- 패스워드 아이콘 이미지 -->
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="27dp"
+                android:layout_gravity="center|left"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/img_password" />
+
+            <!-- 패스워드 입력 공간 -->
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:hint="@string/str_password"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:text="@string/str_dummy_pw"
+                android:textColor="@color/C_FFFFFF"
+                android:textColorHint="@color/C_FFFFFF"
+                android:textSize="17.5dp" />
+        </FrameLayout>
+
+        <!-- 자동로그인 체크박스 레이아웃 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_login"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal">
+
+
+            <!-- 체크박스 :: 자동로그인 -->
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/cb_auto_login"
+                android:layout_width="20dp"
+                android:layout_gravity="right"
+                android:layout_height="20dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/drawable_checkbox_square"
+                android:button="@null"
+                android:contentDescription="@null" />
+
+            <!-- 패스워드 -->
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/str_auto_login"
+                android:textColor="@color/C_FFFFFF"
+                android:textSize="16dp"
+                app:fontPath="fonts/NanumSquareOTFRegular.otf" />
+
+        </LinearLayout>
+
+        <!-- 로그인 버튼 -->
+        <Button
+
+            android:id="@+id/btn_login"
+            android:layout_width="100dp"
+            android:layout_height="@dimen/common_button_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/common_margin_left_17dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="@dimen/common_margin_right_17dp"
+            android:background="@drawable/drawable_radius_common"
+            android:gravity="center"
+            android:text="@string/str_login"
+            android:textColor="@color/C_FFFFFF"
+            android:textSize="17.5dp" />
+
+
+        <!-- 비밀번호 찾기 TEXT -->
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="@string/str_pw_forget"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white" />
+
+
+            <!--sns 계정으로 시작하기 text-->
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/str_sns_login_start"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+
+        </LinearLayout>
+        <!-- 페이스북 로그인 버튼 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.facebook.login.widget.LoginButton
+                    android:id="@+id/btn_facebook"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="5dp" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="34dp"
+                    android:layout_gravity="center"
+                    android:background="@color/white" />
+
+                <ImageView
+                    android:id="@+id/fake_facebook"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/fb" />
+
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- 카카오 로그인 버튼 -->
+
+                <com.kakao.usermgmt.LoginButton
+                    android:id="@+id/btn_kakao"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="5dp" />
+
+
+                <ImageView
+                    android:id="@+id/fake_kakao"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/kakaotalk_icon" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/common_button_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/str_signup"
+        android:textColor="@color/C_FFFFFF"
+        android:textSize="1sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="50dp"
+        android:orientation="vertical">
+
+
+    </LinearLayout>
+
+
+</FrameLayout>
+

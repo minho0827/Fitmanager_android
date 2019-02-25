@@ -1,0 +1,44 @@
+<!-- PasswordSearchActivity -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <!-- Top area -->
+    <include
+        android:id="@+id/PasswordSearchActivity_layout_top_area"
+        layout="@layout/layout_top_area"/>
+
+    <!-- 공지사항 리스트 -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_notice_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/PasswordSearchActivity_layout_top_area"
+        android:splitMotionEvents="false"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"/>
+
+    <!-- 데이터가 없는 경우 보여줄 화면 -->
+    <RelativeLayout
+        android:id="@+id/layout_null_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/PasswordSearchActivity_layout_top_area"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <!-- 공지사항이 없다는 String -->
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/msg_not_notice"
+            android:textColor="@color/C_7E858D"
+            android:textSize="14dp"
+            app:fontPath="fonts/NanumSquareOTFBold.otf"/>
+    </RelativeLayout>
+
+</RelativeLayout>

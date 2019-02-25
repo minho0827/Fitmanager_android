@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorInactive">#747474</color>
+    <color name="colorActiveSmall">#FFFFFF</color>
+    <color name="colorInactiveSmall">#50FFFFFF</color>
+
+    <color name="color_tab_1">#455C65</color>
+    <color name="color_tab_2">#00886A</color>
+    <color name="color_tab_3">#8B6B62</color>
+    <color name="color_tab_4">#6C4A42</color>
+    <color name="color_tab_5">#F63D2B</color>
+
+    <color name="color_notification_back">#ffcd33</color>
+    <color name="color_notification_text">#3E4757</color>
+    <color name="facebook_color">#6a7eff</color>
+
+    <color name="blue">#303F9F</color>
+    <color name="lightcyan">#d2ffee</color>
+    <color name="accent_color">@color/blue</color>
+
+    <color name="colorPrimary">@color/blue</color>
+    <color name="colorPrimaryDark">@color/blue</color>
+    <color name="statusBarColor">@color/blue</color>
+    <color name="navigationBarColor">@android:color/black</color>
+    <color name="drawerArrowColor">@android:color/white</color>
+    <color name="colorAccent">@color/colorPrimaryDark</color>
+    <color name="app_background_color">#ffffff</color>
+    <color name="color_primary_red">#f44336</color>
+    <color name="color_primary_red_dark">#d32f2f</color>
+    <color name="color_primary_green">#4caf50</color>
+    <color name="color_primary_green_dark">#388e3c</color>
+    <color name="color_primary_blue">#2196f3</color>
+    <color name="color_primary_blue_dark">#1976d2</color>
+    <color name="color_accent_pink">#ff4081</color>
+    <color name="maincolor">#df512a</color>
+
+    <color name="lightpink">#fdbfd4</color>
+    <color name="color_shadow">#44000000</color>
+    <color name="title">#332e2e</color>
+    <color name="orange">#fa985b</color>
+    <color name="lightgray">#f1f0f0</color>
+    <color name="gray">#cacaca</color>
+    <color name="gray_light">#f2f2f2</color>
+    <color name="darkgray">#898989</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="green">#4CAF50</color>
+    <color name="green_teal">#009688</color>
+    <color name="purple">#673AB7</color>
+    <color name="red">#F44336</color>
+    <color name="cyan">#00BCD4</color>
+    <color name="lime">#CDDC39</color>
+    <array name="tab_colors">
+        <item name="tab_1">#455C65</item>
+        <item name="tab_2">#00886A</item>
+        <item name="tab_3">#8B6B62</item>
+        <item name="tab_4">#6C4A42</item>
+        <item name="tab_5">#F63D2B</item>
+    </array>
+
+    <color name="primary">#2196F3</color>
+    <color name="primary_dark">#1976D2</color>
+    <color name="primary_light">#BBDEFB</color>
+    <color name="accent">#455A64</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+    <color name="fb_color">#3b5998</color>
+    <color name="kakao_color">#FFE400</color>
+
+
+
+    <!-- ***** Basic & Alpha Color ***** -->
+    <color name="C_F7692D">#F7692D</color>
+    <color name="C_FFFFFF">#FFFFFF</color>
+    <color name="C_91C200">#91C200</color>
+    <color name="C_5D6067">#5D6067</color>
+    <color name="C_AFAEAC">#AFAEAC</color>
+    <color name="C_84888C">#84888C</color>
+    <color name="C_878990">#878990</color>
+    <color name="C_BDBCBD">#BDBCBD</color>
+    <color name="C_A5A9AC">#A5A9AC</color>
+    <color name="C_EBEBEE">#EBEBEE</color>
+    <color name="C_C0C0C0">#C0C0C0</color>
+    <color name="C_000000">#000000</color>
+    <color name="C_FFC300">#FFC300</color>
+    <color name="C_868383">#868383</color>
+    <color name="C_EF8171">#EF8171</color>
+    <color name="C_30BE9F">#30BE9F</color>
+    <color name="C_DC1313">#DC1313</color>
+    <color name="C_C90000">#C90000</color>
+    <color name="C_69A1CD">#69A1CD</color>
+    <color name="C_5C6773">#5C6773</color>
+    <color name="C_EDEDED">#EDEDED</color>
+    <color name="C_FFE400">#FFE400</color>
+    <color name="C_0054FF">#0054FF</color>
+    <color name="C_FF0000">#FF0000</color>
+    <color name="C_FDB900">#FDB900</color>
+    <color name="C_7E858D">#7E858D</color>
+    <color name="C_33000000">#33000000</color>
+    <color name="C_B2000000">#B2000000</color>
+    <color name="C_A1060404">#A1060404</color>
+    <color name="C_00FF0000">#00FF0000</color>
+    <color name="C_42FFFFFF">#42FFFFFF</color>
+    <color name="C_80000000">#80000000</color>
+
+    <color name="title_text_color">@color/C_FFFFFF</color>
+    <color name="background_color">@color/C_FFFFFF</color>
+
+</resources>

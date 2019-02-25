@@ -1,0 +1,180 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="@dimen/cardMarginHorizontal"
+        android:layout_marginRight="@dimen/cardMarginHorizontal"
+        android:layout_marginTop="@dimen/cardMarginVertical"
+        android:visibility="visible"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp"
+        app:cardPreventCornerOverlap="false"
+        app:contentPadding="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/thumbnail"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="@dimen/cardMarginVertical"
+                android:layout_marginRight="@dimen/cardMarginHorizontal"
+                android:layout_marginTop="@dimen/profileMarginTop" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="8.95"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_exerciseType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/profileMarginTop"
+                        android:paddingBottom="2.5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="2.5dp"
+                        android:text="@string/str_exercisetype"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp" />
+
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/bodyPart_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="@dimen/profileMarginTop"
+                        android:paddingBottom="2.5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="2.5dp"
+                        android:text="@string/str_bodyPart_01"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp"
+                        app:fontPath="fonts/NanumSquareOTFBold.otf" />
+
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/bodyPart_02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="@dimen/profileMarginTop"
+                        android:paddingBottom="2.5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="2.5dp"
+                        android:text="@string/str_bodyPart_02"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp"
+                        app:fontPath="fonts/NanumSquareOTFBold.otf" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:maxLength="17"
+                        android:text="@string/str_video_title"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dp"
+                        app:fontPath="fonts/NanumSquareOTFBold.otf" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_exercise_intensity"
+                        android:textColor="@android:color/black"
+                        app:fontPath="fonts/NanumSquareOTFBold.otf" />
+                    />
+
+                    <ImageView
+                        android:id="@+id/img_level_icon01"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/dumbell" />
+
+                    <ImageView
+                        android:id="@+id/img_level_icon02"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/dumbell" />
+
+                    <ImageView
+                        android:id="@+id/img_level_icon03"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/dumbell" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <FrameLayout
+        android:id="@+id/fl_layout_none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/str_video_empty"
+            app:fontPath="fonts/NanumSquareOTFBold.otf" />
+
+    </FrameLayout>
+</FrameLayout>
+

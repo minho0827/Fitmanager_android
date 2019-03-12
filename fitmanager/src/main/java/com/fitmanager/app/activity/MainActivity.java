@@ -28,7 +28,7 @@ import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 import com.viewpagerindicator.TitlePageIndicator;
 
-public class MainActivity extends AppCompatActivity /*DrawerActivity*/ {
+public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     private ViewPager mViewPager;
     private final String[] ACTION_BAR_TITLE = {"코치", "인기동영상", "마이페이지"};
@@ -158,9 +158,7 @@ public class MainActivity extends AppCompatActivity /*DrawerActivity*/ {
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
 
-//        getMenuInflater().inflate(R.menu.coach_menu, menu);
         mMenu = menu;
-//        MenuInflater inflater = getMenuInflater();
         MenuItem item = menu.add(0, 1, 0, "로그인");
         item.setIcon(R.drawable.star);
         menu.add(0, 2, 0, "관리자에게 글남기기").setIcon(R.drawable.star_yellow);

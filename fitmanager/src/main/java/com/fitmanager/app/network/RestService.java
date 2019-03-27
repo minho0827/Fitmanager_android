@@ -3,7 +3,7 @@ package com.fitmanager.app.network;
 import com.fitmanager.app.model.BookmarkVO;
 import com.fitmanager.app.model.CoachVO;
 import com.fitmanager.app.model.CoachViewHistoryVO;
-import com.fitmanager.app.model.DefaultRetrunCodeListVo;
+import com.fitmanager.app.model.DefaultRetrunCodeListVO;
 import com.fitmanager.app.model.MealVO;
 import com.fitmanager.app.model.MemberVO;
 import com.fitmanager.app.model.NoticeVo;
@@ -152,7 +152,7 @@ public interface RestService {
      * Key값 불러오기
      ************************************************************************************************************************************************/
     @GET("/api/keyList")
-    Call<List<DefaultRetrunCodeListVo>> requestKeyValue();
+    Call<List<DefaultRetrunCodeListVO>> requestKeyValue();
 
 
     /**

@@ -13,4 +13,33 @@
         android:adjustViewBounds="true"
         android:scaleType="centerCrop" />
 
+    <!-- 첫번째 카메라 아이콘 이미지 -->
+    <FrameLayout
+        android:id="@+id/frame_layout_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp">
+
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@color/gray"
+            android:padding="30dp"
+            android:src="@drawable/camera" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:padding="5dp"
+            android:text="0/8"
+            android:textColor="@color/white"
+            android:textSize="10dp" />
+
+    </FrameLayout>
+
+
+
 </LinearLayout>

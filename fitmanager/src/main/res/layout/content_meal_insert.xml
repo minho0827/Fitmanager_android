@@ -7,43 +7,228 @@
     android:layout_marginRight="10dp"
     android:orientation="vertical">
 
-    <android.support.v7.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:text="식단 등록하기"
-        android:textSize="20dp"
-        app:fontPath="fonts/NanumSquareOTFLight.otf" />
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewpager"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="100dp">
-
-    </android.support.v4.view.ViewPager>
+        android:layout_height="match_parent">
 
 
-    <android.support.v7.widget.AppCompatEditText
-        android:id="@+id/title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/edittext_border"
-        android:ems="10"
-        android:hint="식단 제목 등록"
-        android:padding="10dp"
-        android:textSize="15dp"
-        app:fontPath="fonts/NanumSquareOTFLight.otf" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/btn_meal_type"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="left"
-        android:background="@drawable/edittext_border"
-        android:ems="10"
-        android:hint="식단 타입 선택"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
 
-        android:padding="10dp"
-        android:textSize="15dp">
-    </android.support.v7.widget.AppCompatButton>
+                <!-- 첫번째 카메라 아이콘 이미지 -->
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/img_camera"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@color/gray"
+                        android:padding="30dp"
+                        android:src="@drawable/camera" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_gallery_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:padding="5dp"
+                        android:text="0/8"
+                        android:textColor="@color/white"
+                        android:textSize="10dp"
+                        app:fontPath="fonts/NanumSquareOTFBold.otf" />
+
+                </FrameLayout>
+
+
+                <ImageView
+                    android:id="@+id/img_01"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/white"
+                    android:visibility="gone"
+                    android:padding="30dp" />
+
+
+                <ImageView
+                    android:id="@+id/img_02"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/white"
+                    android:visibility="gone"
+                    android:padding="30dp" />
+
+
+                <ImageView
+                    android:id="@+id/img_03"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/white"
+                    android:visibility="gone"
+                    android:padding="30dp" />
+
+
+
+                <ImageView
+                    android:id="@+id/img_04"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/white"
+                    android:visibility="gone"
+                    android:padding="30dp" />
+
+
+
+                <ImageView
+                    android:id="@+id/img_05"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/white"
+                    android:visibility="gone"
+                    android:padding="30dp" />
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/edit_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_border"
+                android:ems="10"
+                android:hint="식단 제목 등록"
+                android:padding="10dp"
+                android:textSize="15dp"
+                app:fontPath="fonts/NanumSquareOTFLight.otf" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+
+                <ToggleButton
+                    android:id="@+id/togg_btn_breakfast"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:tag="1"
+                    android:text="아침"
+                    android:textColor="@color/white"
+                    android:textOff="아침"
+                    android:textOn="아침" />
+
+
+                <ToggleButton
+                    android:id="@+id/togg_btn_lunch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="0.25"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:tag="2"
+                    android:text="점심"
+                    android:textColor="@color/white"
+                    android:textOff="점심"
+                    android:textOn="점심" />
+
+
+                <ToggleButton
+                    android:id="@+id/togg_btn_dinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="0.25"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:tag="3"
+                    android:text="저녁"
+                    android:textColor="@color/white"
+                    android:textOff="저녁"
+                    android:textOn="저녁" />
+
+                <ToggleButton
+                    android:id="@+id/togg_btn_dessert"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="0.25"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:tag="4"
+                    android:text="간식"
+                    android:textColor="@color/white"
+                    android:textOff="간식"
+                    android:textOn="간식" />
+
+
+            </LinearLayout>
+
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/btn_meal_content"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_border"
+                android:ems="10"
+                android:gravity="left"
+                android:hint="내용작성"
+                android:padding="10dp"
+                android:textSize="15dp"
+                app:fontPath="fonts/NanumSquareOTFBold.otf"></android.support.v7.widget.AppCompatEditText>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_insert"
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_button_height"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/str_insert"
+                android:textColor="@color/C_FFFFFF"
+                android:textSize="17.5dp"
+                app:fontPath="fonts/NanumSquareOTFBold.otf" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
 </LinearLayout>

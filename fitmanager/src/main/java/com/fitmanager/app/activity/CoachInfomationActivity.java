@@ -294,14 +294,14 @@ public class CoachInfomationActivity extends AppCompatActivity implements AppBar
             public void onResponse(Call<CoachVO> call, Response<CoachVO> response) {
                 final CoachVO coachVO = response.body();
                 if (coachVO != null) {
-                    mCoachName = coachVO.getName();
+                    mCoachName = coachVO.getCoachName();
                     mCoachId = coachVO.getCoachId();
                     mInstaUri = coachVO.getInstagramUrl();
                     Log.i(TAG, "mInstaUri :" + coachVO.getInstagramUrl());
                     mfacebookUri = coachVO.getFacebookUrl();
                     Log.d(TAG, "coachVO : " + coachVO);
-                    tvName.setText(coachVO.getName());
-                    mainTvName.setText(coachVO.getName());
+                    tvName.setText(coachVO.getCoachName());
+                    mainTvName.setText(coachVO.getCoachName());
 //                    coachBackground.setBackgroundResource(setDrawbleBackground(coachVO.getExerciseType()));
 //                    tvJob.setText(coachVO.getJob());
                     Glide.with(getApplicationContext())

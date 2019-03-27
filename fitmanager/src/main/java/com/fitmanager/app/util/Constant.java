@@ -16,7 +16,7 @@ public class Constant {
      ************************************************************************************************************************************************/
     public static final String APP_KIND = "fitmanager";                                  // Applcation Kind
 
-    public static final String SERVER_ADDR = "http://192.168.0.150:8080/";
+    public static final String SERVER_ADDR = "http://192.168.0.186:8080/";
 //    public static final String SERVER_ADDR = "http://192.168.0.186:8080/";
     public static final String BUCKET_NAME = "s3testymh";
 //    public static final String PROFILE_UPLOAD_DIR = "profile";
@@ -85,8 +85,10 @@ public class Constant {
     public static final String RS_SUCCESS = "SUCCESS";                                            // 정상 Return
     public static final String RS_ERRORS_FAIL = "FAIL";                                            //
 
-    public static final String Y = "Y";                                              // YES
-    public static final String N = "N";                                              // No
+    public static final String Y = "Y";                                                              // YES
+    public static final String N = "N";                                                              // No
+    public static final Integer MEMBER_TYPE_COACH = 2;                                               // 코치
+    public static final Integer MEMBER_TYPE_MEM = 1;                                                 // 일반회원
 
 
     /**

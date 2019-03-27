@@ -13,7 +13,7 @@ public class CoachVO implements Serializable {
     private String weight;
     private String job;
     private int exerciseType;
-    private String name;
+    private String coachName;
     private String company;
     private String facebookUrl;
     private String instagramUrl;

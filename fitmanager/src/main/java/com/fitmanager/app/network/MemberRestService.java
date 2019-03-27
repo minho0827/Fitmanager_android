@@ -40,5 +40,12 @@ public interface MemberRestService {
     Call<List<VersionCheckVO>> getNoticeRequest(@QueryMap Map<String, Object> param);
 
 
+  /**
+     * 식단등록 요청
+     ************************************************************************************************************************************************/
+    @GET("api/requestMealInsert")
+    Call<Integer> requestMealInsert(@QueryMap Map<String, Object> param);
+
+
 
 }

@@ -19,6 +19,7 @@ import com.fitmanager.app.R;
 import com.fitmanager.app.activity.BookmarkCoachActivity;
 import com.fitmanager.app.activity.BookmarkMealListActivity;
 import com.fitmanager.app.activity.BookmarkVideoActivity;
+import com.fitmanager.app.activity.InsertMealActivity;
 import com.fitmanager.app.activity.LoginActivity;
 import com.fitmanager.app.activity.MyCommentHistoryActivity;
 import com.fitmanager.app.activity.ProfileEditActivity;
@@ -30,9 +31,9 @@ import com.fitmanager.app.util.Constant;
 import com.fitmanager.app.util.FitProgressBar;
 import com.fitmanager.app.util.ImageUtils;
 import com.fitmanager.app.util.LoginUtils;
+import com.github.clans.fab.FloatingActionMenu;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.rey.material.widget.FloatingActionButton;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -54,7 +55,8 @@ public class MyPageFragment extends Fragment {
     LinearLayout linearMeal;
     LinearLayout linearCoach;
     LinearLayout linearComment;
-    FloatingActionButton fab;
+    FloatingActionMenu floatingMenuBtn;
+    com.github.clans.fab.FloatingActionButton fbMealInsert, fbVideoInsert;
     private static FitProgressBar mProgressBar = new FitProgressBar();
 
     FrameLayout layoutLoggedOut;
@@ -69,7 +71,10 @@ public class MyPageFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         return inflater.inflate(R.layout.fragment_mypage_list, container, false);
+
+
     }
 
 
@@ -95,6 +100,10 @@ public class MyPageFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
 
+        floatingMenuBtn = view.findViewById(R.id.floating_menu_btn);
+        fbMealInsert = view.findViewById(R.id.fb_meal_insert);
+        fbVideoInsert = view.findViewById(R.id.fb_video_insert);
+
         mProfileImg = view.findViewById(R.id.img_profile);
         mName = view.findViewById(R.id.name);
         btnLogin = view.findViewById(R.id.btn_login);
@@ -106,15 +115,20 @@ public class MyPageFragment extends Fragment {
         linearCoach = view.findViewById(R.id.linear_bookmark_coach);
         linearComment = view.findViewById(R.id.linear_comment);
         layoutLoggedOut = view.findViewById(R.id.layout_loggedout);
-        fab = view.findViewById(R.id.fab);
 
 
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
+        fbMealInsert.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), InsertMealActivity.class);
+                startActivity(intent);
+            }
+        });
+        fbVideoInsert.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
             }
         });
+
         // 기록
         linearHistory.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -181,8 +195,21 @@ public class MyPageFragment extends Fragment {
             }
         });
 
+
     }
 
+
+    /* 일반 회원이면 floatingbtn GONE 코치면 VISIBLE */
+    private void floatingBtnGoneVisible() {
+
+        /* 코치 일경우 */
+        if (LoginUtils.isLoggedIn() &&
+                LoginUtils.getLoginUserVO().getMemberType() == 2) {
+            floatingMenuBtn.setVisibility(View.VISIBLE);
+        } else {
+            floatingMenuBtn.setVisibility(View.GONE);
+        }
+    }
 
     private void callActivity() {
         Intent intent = new Intent(mContext, VideoActivity.class);
@@ -191,6 +218,7 @@ public class MyPageFragment extends Fragment {
         mContext.startActivity(intent);
 
     }
+
     @Override
     public void onResume() {
         super.onResume();
@@ -216,6 +244,8 @@ public class MyPageFragment extends Fragment {
             layoutLoggedOut.setVisibility(View.VISIBLE);
         }
         Log.i(TAG, "onResume");
+        floatingBtnGoneVisible();
+
     }
 
     private void getLoginUserInfoService() {

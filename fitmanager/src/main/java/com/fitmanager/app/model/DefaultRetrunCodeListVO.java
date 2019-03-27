@@ -8,7 +8,7 @@ import lombok.Data;
 
 
 @Data
-public class DefaultRetrunCodeListVo {
+public class DefaultRetrunCodeListVO {
     /**
      * Variable
      */

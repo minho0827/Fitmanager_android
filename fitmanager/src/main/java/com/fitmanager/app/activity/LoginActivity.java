@@ -365,6 +365,7 @@ public class LoginActivity extends AppCompatActivity {
                     onLoginSuccess(memberVO);
                 }
             }
+
             @Override
             public void onFailure(Call<MemberVO> call, Throwable t) {
 
@@ -418,7 +419,6 @@ public class LoginActivity extends AppCompatActivity {
 
         com.fitmanager.app.util.Utils.hideProgress(mProgressBar);
 
-//        hideProgress();
         Toast.makeText(mContext, "로그인 되었습니다.", Toast.LENGTH_SHORT).show();
         finish();
         btnLogin.setEnabled(true);
@@ -451,12 +451,6 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-    private void hideProgress() {
-            Log.d(TAG, "hideProgress()!!!");
-            mProgressBar.hide();
-
-    }
-
 
     private class SessionCallback implements ISessionCallback {
 
@@ -481,7 +475,7 @@ public class LoginActivity extends AppCompatActivity {
             Log.e(TAG, "onLoginFailed: " + message);
         }
 
-        hideProgress();
+        com.fitmanager.app.util.Utils.hideProgress(mProgressBar);
 
         Toast.makeText(getBaseContext(), "로그인에 실패 하였습니다", Toast.LENGTH_SHORT).show();
         btnLogin.setEnabled(true);
@@ -529,7 +523,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-
 
 
 }

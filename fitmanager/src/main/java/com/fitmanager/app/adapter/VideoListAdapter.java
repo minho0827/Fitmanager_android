@@ -103,7 +103,7 @@ public class VideoListAdapter extends RecyclerView.Adapter<VideoListAdapter.View
 
         if (viewHolder.isHeader) {
             viewHolder.videoNumCount.setText(mVideoItems.size() + "");
-            viewHolder.coachName.setText(mCoachVO.getName());
+            viewHolder.coachName.setText(mCoachVO.getCoachName());
 
         } else if (viewHolder.isCell) {
 

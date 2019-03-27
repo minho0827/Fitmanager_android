@@ -35,7 +35,7 @@ public class MealsListAdapter extends RecyclerView.Adapter<MealsListAdapter.View
     static int TYPE_FOOTER = 2;
 
     HashMap<Integer, Integer> mViewPagerState = new HashMap<>();
-    private FragmentManager fragmentManager;
+    FragmentManager fragmentManager;
 
     private static final int MAX_CONTENT_LINE_COUNT = 5;
     private CoachVO coachVO = new CoachVO();
@@ -132,7 +132,7 @@ public class MealsListAdapter extends RecyclerView.Adapter<MealsListAdapter.View
 
         if (viewHolder.isHeader) {
             viewHolder.mealNumCount.setText(mMealItems.size() + "");
-            viewHolder.coachName.setText(coachVO.getName());
+            viewHolder.coachName.setText(coachVO.getCoachName());
 
         } else if (viewHolder.isFooter) {
             if (mMealItems.size() == 0) {

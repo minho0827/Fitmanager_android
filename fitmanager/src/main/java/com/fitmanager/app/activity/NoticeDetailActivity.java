@@ -47,10 +47,10 @@ public class NoticeDetailActivity extends BaseActivity implements View.OnClickLi
         txt_centerTitle.setText(getString(R.string.str_notice));
         iv_back.setVisibility(View.VISIBLE);
 
-        // UI resource
-        txt_notice_title = getAppCompatTextView(R.id.txt_notice_title);
-        txt_notice_time = getAppCompatTextView(R.id.txt_notice_time);
-        txt_notice_message = getAppCompatTextView(R.id.txt_notice_message);
+//        // UI resource
+//        txt_notice_title = getAppCompatTextView(R.id.txt_notice_title);
+//        txt_notice_time = getAppCompatTextView(R.id.txt_notice_time);
+//        txt_notice_message = getAppCompatTextView(R.id.txt_notice_message);
 
         // setOnClickListener
         layout_back.setOnClickListener(this);

@@ -83,6 +83,11 @@
             android:theme="@style/Theme.AppCompat.Light" />
         />
         <activity
+            android:name=".activity.InsertMealActivity"
+
+            android:theme="@style/Theme.AppCompat.Light" />
+        />
+        <activity
             android:name=".activity.CoachAcitivty"
             android:theme="@style/AppTheme.NoActionBar" />
         />
@@ -154,6 +159,10 @@
             android:name=".activity.CoachVideoListActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
+        <activity
+            android:name=".activity.MealInsertActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
         <!--
      ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -177,10 +186,7 @@
             android:name="com.google.firebase.messaging.default_notification_channel_id"
             android:value="@string/default_notification_channel_id" />
 
-        <activity
-            android:name=".activity.MealInsertActivity"
-            android:label="@string/title_activity_meal_insert"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+
     </application>
 
 </manifest>

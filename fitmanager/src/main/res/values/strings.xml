@@ -44,6 +44,7 @@
     <string name="str_dummy_pw">1234</string>
     <string name="str_password">Password</string>
     <string name="str_login">로그인</string>
+    <string name="str_insert">등록하기</string>
     <string name="str_signup_">가입하기</string>
     <string name="str_signup">지금 가입하러가기</string>
     <string name="str_signup_agree">회원가입을 하시면 약관에 동의하시는 것으로 간주됩니다.</string>

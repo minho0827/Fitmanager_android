@@ -9,6 +9,8 @@
     <dimen name="fab_scroll_threshold">4dp</dimen>
 
     <dimen name="card_margin">16dp</dimen>
+    <dimen name="standard_45">45dp</dimen>
+    <dimen name="standard_21">21dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="list_item_avatar_size">40dp</dimen>
     <dimen name="spacing_normal">16dp</dimen>
@@ -27,7 +29,9 @@
     <dimen name="profileLowHorizontal">110dp</dimen>
     <dimen name="profileLowHorizontal_MinMargin">10dp</dimen>
     <dimen name="profileLowVertical">10dp</dimen>
-
+    <dimen name="standard_55">55dp</dimen>
+    <dimen name="standard_105">105dp</dimen>
+    <dimen name="standard_155">155dp</dimen>
     <dimen name="tabsHeight">48dp</dimen>
 
 
@@ -44,7 +48,7 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
 
 
-    <dimen name="common_button_height">44dp</dimen>
+    <dimen name="common_button_height">54dp</dimen>
     <dimen name="common_margin_left_17dp">17dp</dimen>
     <dimen name="common_margin_right_17dp">17dp</dimen>
 

@@ -207,7 +207,7 @@ public class CoachAcitivty extends AppCompatActivity {
                     String sbAppendWeight = coachVO.getWeight().toString() + "kg";
 
                     Log.d(TAG, "coachVO : " + coachVO);
-                    tvName.setText(coachVO.getName());
+                    tvName.setText(coachVO.getCoachName());
                     tvHeight.setText(strInsertBlank(sbAppendHeight));
                     tvHeight.setBackgroundResource(R.drawable.xml_colorbg_main);
                     tvWeight.setText(strInsertBlank(sbAppendWeight));

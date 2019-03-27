@@ -19,7 +19,6 @@ import com.fitmanager.app.util.Constant;
 import com.fitmanager.app.util.FitProgressBar;
 import com.fitmanager.app.util.LoginUtils;
 import com.fitmanager.app.util.OnSingleClickListener;
-import com.fitmanager.app.util.PermissionUtil;
 import com.fitmanager.app.util.PrefsUtils;
 import com.fitmanager.app.util.RequestCodeUtil;
 import com.fitmanager.app.util.RetroUtil;
@@ -216,7 +215,9 @@ public class SplashActivity extends BaseActivity {
     }
 
     private void permissionCheck() {
-        PermissionUtil.checkAndRequestPermission(this, )
+//        PermissionUtil.checkAndRequestPermission(this, PERMISSION)
+
+        goMain();
     }
 
     private void goMain() {
@@ -274,16 +275,19 @@ public class SplashActivity extends BaseActivity {
                                     });
                                     return;
                                 } else {
-                                    AlertDialogUtil.showNoticeDialog(mContext, noticeTitle, noticeMessage, new OnSingleClickListener() {
-                                        @Override
-                                        public void onSingleClick(View v) {
+                                    if (!isFinishing()) {
+                                        AlertDialogUtil.showNoticeDialog(mContext, noticeTitle, noticeMessage, new OnSingleClickListener() {
+                                            @Override
+                                            public void onSingleClick(View v) {
+                                                AlertDialogUtil.dismissDialog();
+                                                permissionCheck();
+                                            }
+                                        }, dialogInterface -> {
                                             AlertDialogUtil.dismissDialog();
                                             permissionCheck();
-                                        }
-                                    }, dialogInterface -> {
-                                        AlertDialogUtil.dismissDialog();
-                                        permissionCheck();
-                                    });
+
+                                        });
+                                    }
                                 }
                             }
 
@@ -318,7 +322,9 @@ public class SplashActivity extends BaseActivity {
                             });
                             break;
                     }
-                } else {
+                } else
+
+                {
                     AlertDialogUtil.showSingleDialog(mContext, getString(R.string.error_e00), new OnSingleClickListener() {
                         @Override
                         public void onSingleClick(View v) {
@@ -386,8 +392,6 @@ public class SplashActivity extends BaseActivity {
             });
         }
     }
-
-
 
 
     /**

@@ -146,7 +146,7 @@ public class CoachListAdapter extends RecyclerView.Adapter<CoachListAdapter.View
                         .crossFade()
                         .into(viewHolder.imgProfile);
 
-                viewHolder.tvProfileName.setText(coachVO.getName());
+                viewHolder.tvProfileName.setText(coachVO.getCoachName());
                 viewHolder.tvExerciseType.setText(Utils.getExerciseType(coachVO.getExerciseType()));
                 viewHolder.tvExerciseType.setBackgroundResource
                         (Utils.getExerciseByColorType(coachVO.getExerciseType()));

@@ -10,7 +10,7 @@ android {
         maven { url "https://jitpack.io" }
     }
     defaultConfig {
-        minSdkVersion 15
+        minSdkVersion 23
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -102,6 +102,12 @@ dependencies {
     implementation 'com.facebook.stetho:stetho-okhttp3:1.5.0'
     implementation 'com.facebook.stetho:stetho-urlconnection:1.5.0'
     implementation 'com.android.support:multidex:1.0.3'
+
+    implementation 'com.github.clans:fab:1.6.2'
+
+    /* 이미지 멀티 picker lib*/
+    compile 'com.erikagtierrez.multiple_media_picker:multiple-media-picker:1.0.5'
+
 
 
 }

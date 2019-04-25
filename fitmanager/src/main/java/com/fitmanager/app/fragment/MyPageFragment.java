@@ -56,6 +56,7 @@ public class MyPageFragment extends Fragment {
     LinearLayout linearCoach;
     LinearLayout linearComment;
     FloatingActionMenu floatingMenuBtn;
+    private int mCoachId;
     com.github.clans.fab.FloatingActionButton fbMealInsert, fbVideoInsert;
     private static FitProgressBar mProgressBar = new FitProgressBar();
 
@@ -120,6 +121,7 @@ public class MyPageFragment extends Fragment {
         fbMealInsert.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), InsertMealActivity.class);
+                intent.putExtra("coachId",mCoachId);
                 startActivity(intent);
             }
         });
@@ -268,6 +270,7 @@ public class MyPageFragment extends Fragment {
             public void onResponse(Call<MemberVO> call, Response<MemberVO> response) {
                 final MemberVO memberVO = response.body();
                 if (memberVO != null) {
+                    mCoachId = memberVO.getMemberId();
 
                 }
                 hideProgress();

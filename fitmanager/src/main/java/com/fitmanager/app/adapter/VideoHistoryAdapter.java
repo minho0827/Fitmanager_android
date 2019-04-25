@@ -18,6 +18,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 import com.fitmanager.app.R;
 import com.fitmanager.app.activity.VideoActivity;
 import com.fitmanager.app.model.VideoVO;
@@ -29,6 +31,9 @@ import java.util.List;
 import java.util.Map;
 
 import butterknife.ButterKnife;
+import jp.wasabeef.glide.transformations.CropCircleTransformation;
+
+import static com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade;
 
 public class VideoHistoryAdapter extends RecyclerView.Adapter<VideoHistoryAdapter.ViewHolder> {
     Context mContext;
@@ -81,11 +86,19 @@ public class VideoHistoryAdapter extends RecyclerView.Adapter<VideoHistoryAdapte
             viewHolder.tvExerciseType.setBackgroundResource
                     (Utils.getExerciseByColorType(videoVO.getExerciseType()));
             viewHolder.tvBodyPart01.setText(Utils.getBodyType(videoVO.getBodypart01()));
+
+
             Glide.with(mContext)
                     .load(videoVO.getImageUrl())
-                    .centerCrop()
-                    .crossFade()
+                    .apply(new RequestOptions()
+                            .placeholder(R.drawable.placeholder)
+                            .bitmapTransform(new CropCircleTransformation(mContext))
+                            .diskCacheStrategy(DiskCacheStrategy.NONE)
+                            .skipMemoryCache(true)
+                            .centerCrop())
+                    .transition(withCrossFade())
                     .into(viewHolder.thumbnail);
+
 
             viewHolder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override

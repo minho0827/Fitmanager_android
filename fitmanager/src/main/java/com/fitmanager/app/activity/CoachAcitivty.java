@@ -20,6 +20,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 import com.fitmanager.app.R;
 import com.fitmanager.app.fragment.MealFragment;
 import com.fitmanager.app.fragment.VideoFragment;
@@ -44,6 +46,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+
+import static com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade;
 
 
 public class CoachAcitivty extends AppCompatActivity {
@@ -217,12 +221,18 @@ public class CoachAcitivty extends AppCompatActivity {
                     tvExerciseType.setBackgroundResource(Utils.getExerciseByColorType((coachVO.getExerciseType())));
                     tvCompany.setText(strInsertBlank(coachVO.getCompany()));
                     tvCompany.setBackgroundResource(R.drawable.xml_colorbg_main);
-                    Glide.with(getApplicationContext())
+
+                    Glide.with(mContext)
                             .load(coachVO.getProfileImg())
-                            .centerCrop()
-                            .bitmapTransform(new CropCircleTransformation(getApplicationContext()))
-                            .crossFade()
+                            .apply(new RequestOptions()
+                                    .placeholder(R.drawable.placeholder)
+                                    .bitmapTransform(new CropCircleTransformation(mContext))
+                                    .diskCacheStrategy(DiskCacheStrategy.NONE)
+                                    .skipMemoryCache(true)
+                                    .centerCrop())
+                            .transition(withCrossFade())
                             .into(imgProfile);
+
 
 
                     ImageUtils.getProfileImage(getApplicationContext(), imgProfile,

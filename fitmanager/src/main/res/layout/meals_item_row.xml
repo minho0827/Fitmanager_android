@@ -80,7 +80,7 @@
             <!--android:layout_height="wrap_content"-->
             <!--android:layout_marginTop="1dp"-->
             <!--android:gravity="right"-->
-            <!--app:fontPath="fonts/NanumSquareOTFBold.otf"-->
+            <!--app:fontPath="foNanumSquareOTFBold.ttf.otf"-->
             <!--android:layout_marginLeft="200dp"-->
             <!--android:textSize="12dp" />-->
 

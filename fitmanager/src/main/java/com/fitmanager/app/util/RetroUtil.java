@@ -12,12 +12,6 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-/**
- * Retrofit2 Util
- *
- * @author 정문기
- * @since 2018.06.18
- */
 public class RetroUtil {
 
     /**

@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
+import com.bumptech.glide.request.RequestOptions;
 import com.fitmanager.app.R;
 import com.fitmanager.app.model.CoachVO;
 import com.fitmanager.app.util.Utils;
@@ -20,7 +22,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.util.List;
 
-import jp.wasabeef.glide.transformations.CropCircleTransformation;
+import static com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade;
 
 public class CoachListAdapter extends RecyclerView.Adapter<CoachListAdapter.ViewHolder> {
     private static final String TAG = "CoachListAdapter";
@@ -139,12 +141,15 @@ public class CoachListAdapter extends RecyclerView.Adapter<CoachListAdapter.View
             if (coachVO != null) {
                 String sbAppendHeight = coachVO.getHeight().toString() + "cm";
                 String sbAppendWeight = coachVO.getWeight().toString() + "kg";
+
                 Glide.with(mContext)
                         .load(coachVO.getProfileImg())
-                        .centerCrop()
-                        .bitmapTransform(new CropCircleTransformation(mContext))
-                        .crossFade()
+                        .apply(new RequestOptions()
+                                .placeholder(R.drawable.placeholder)
+                                .circleCrop().transform(new RoundedCorners(50)))
+                        .transition(withCrossFade())
                         .into(viewHolder.imgProfile);
+
 
                 viewHolder.tvProfileName.setText(coachVO.getCoachName());
                 viewHolder.tvExerciseType.setText(Utils.getExerciseType(coachVO.getExerciseType()));
@@ -212,7 +217,7 @@ public class CoachListAdapter extends RecyclerView.Adapter<CoachListAdapter.View
                 } else if (mAdapterType == ADAPTER_TYPE_FILTER) {
                     itemView.setVisibility(View.VISIBLE);
                     isHeader = true;
-                    btnFilter = (Button) itemView.findViewById(R.id.btnFilter);
+                    btnFilter = itemView.findViewById(R.id.btnFilter);
 //                    btnCoachSearch = (Button) itemView.findViewById(R.id.btnCoachSearch);
 //                    tvCoachCount = (TextView) itemView.findViewById(R.id.tv_coach_count);
 

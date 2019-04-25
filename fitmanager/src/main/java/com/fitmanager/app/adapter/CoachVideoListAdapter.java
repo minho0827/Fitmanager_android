@@ -12,12 +12,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 import com.fitmanager.app.R;
 import com.fitmanager.app.activity.VideoActivity;
 import com.fitmanager.app.model.VideoVO;
 import com.fitmanager.app.util.Utils;
 
 import java.util.List;
+
+import jp.wasabeef.glide.transformations.CropCircleTransformation;
+
+import static com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade;
 
 public class CoachVideoListAdapter extends RecyclerView.Adapter<CoachVideoListAdapter.ViewHolder> {
 
@@ -79,10 +85,16 @@ public class CoachVideoListAdapter extends RecyclerView.Adapter<CoachVideoListAd
                     (Utils.getExerciseByColorType(videoVO.getExerciseType()));
             getExerciseLevelDrawble(videoVO.getLevel(), viewHolder);
 
+
             Glide.with(mContext)
                     .load(videoVO.getImageUrl())
-                    .centerCrop()
-                    .crossFade()
+                    .apply(new RequestOptions()
+                            .placeholder(R.drawable.placeholder)
+                            .bitmapTransform(new CropCircleTransformation(mContext))
+                            .diskCacheStrategy(DiskCacheStrategy.NONE)
+                            .skipMemoryCache(true)
+                            .centerCrop())
+                    .transition(withCrossFade())
                     .into(viewHolder.thumbnail);
 
             viewHolder.itemView.setOnClickListener(new View.OnClickListener() {

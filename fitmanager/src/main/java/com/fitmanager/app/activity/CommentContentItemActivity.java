@@ -21,6 +21,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 import com.fitmanager.app.R;
 import com.fitmanager.app.adapter.ContentCommentAdapter;
 import com.fitmanager.app.listener.RecyclerItemClickListener;
@@ -43,11 +45,14 @@ import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import jp.wasabeef.glide.transformations.CropCircleTransformation;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+
+import static com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade;
 
 public class CommentContentItemActivity extends AppCompatActivity {
     private List<CommentVO> mCommentItems = new ArrayList<>();
@@ -333,10 +338,16 @@ public class CommentContentItemActivity extends AppCompatActivity {
                 final NotiVO notiVO = response.body();
                 if (notiVO != null) {
                     title.setText(notiVO.getTitle());
+
                     Glide.with(getApplicationContext())
                             .load(notiVO.getThumbnail())
-                            .centerCrop()
-                            .crossFade()
+                            .apply(new RequestOptions()
+                                    .placeholder(R.drawable.placeholder)
+                                    .bitmapTransform(new CropCircleTransformation(getApplicationContext()))
+                                    .diskCacheStrategy(DiskCacheStrategy.NONE)
+                                    .skipMemoryCache(true)
+                                    .centerCrop())
+                            .transition(withCrossFade())
                             .into(contentImage);
 
                 } else {

@@ -81,16 +81,12 @@
         <activity
             android:name=".activity.MainActivity"
             android:theme="@style/Theme.AppCompat.Light" />
-        />
         <activity
             android:name=".activity.InsertMealActivity"
-
             android:theme="@style/Theme.AppCompat.Light" />
-        />
         <activity
             android:name=".activity.CoachAcitivty"
             android:theme="@style/AppTheme.NoActionBar" />
-        />
         <activity
             android:name=".activity.MealDetailActivity"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -158,10 +154,6 @@
         <activity
             android:name=".activity.CoachVideoListActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".activity.MealInsertActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
         <!--
      ATTENTION: This was auto-generated to add Google Play services to your project for

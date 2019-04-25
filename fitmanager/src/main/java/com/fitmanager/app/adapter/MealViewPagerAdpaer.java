@@ -8,12 +8,18 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 import com.fitmanager.app.R;
 import com.fitmanager.app.model.MealVO.MealImagesVO;
 
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.List;
+
+import jp.wasabeef.glide.transformations.CropCircleTransformation;
+
+import static com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade;
 
 public class MealViewPagerAdpaer extends PagerAdapter {
 
@@ -35,11 +41,19 @@ public class MealViewPagerAdpaer extends PagerAdapter {
         MealImagesVO mealImagesVO = mMealImagesList.get(position);
         String imageUrl = mealImagesVO.getImageUrl();
         if (StringUtils.isNotEmpty(imageUrl)) {
+
             Glide.with(container.getContext())
                     .load(imageUrl)
-                    .centerCrop()
-                    .crossFade()
+                    .apply(new RequestOptions()
+                            .placeholder(R.drawable.placeholder)
+                            .bitmapTransform(new CropCircleTransformation(container.getContext()))
+                            .diskCacheStrategy(DiskCacheStrategy.NONE)
+                            .skipMemoryCache(true)
+                            .centerCrop())
+                    .transition(withCrossFade())
                     .into(imgMeal);
+
+
 
         }
         container.addView(itemView);

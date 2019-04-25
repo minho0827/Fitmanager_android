@@ -1,15 +1,12 @@
 package com.fitmanager.app;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.res.Configuration;
-import android.os.Bundle;
 import android.support.multidex.MultiDex;
 import android.support.multidex.MultiDexApplication;
 
 import com.bumptech.glide.Glide;
 import com.fitmanager.app.model.MemberVO;
-import com.fitmanager.app.util.Utils;
 import com.kakao.auth.ApprovalType;
 import com.kakao.auth.AuthType;
 import com.kakao.auth.IApplicationConfig;
@@ -17,9 +14,6 @@ import com.kakao.auth.ISessionConfig;
 import com.kakao.auth.KakaoAdapter;
 import com.kakao.auth.KakaoSDK;
 
-/**
- * Created by Home on 2018. 3. 21..
- */
 
 public class BaseApplication extends MultiDexApplication {
 
@@ -79,8 +73,6 @@ public class BaseApplication extends MultiDexApplication {
 
 
 
-
-
     private static class KakaoSDKAdapter extends KakaoAdapter {
         /**
          * Session Config에 대해서는 default값들이 존재한다.
@@ -136,7 +128,7 @@ public class BaseApplication extends MultiDexApplication {
         instance = this;
 
         KakaoSDK.init(new BaseApplication.KakaoSDKAdapter());
-        APP_VERSION = Utils.getCurrentVersion(getContext());
+//        APP_VERSION = Utils.getCurrentVersion(getContext());
 
     }
 
@@ -208,42 +200,4 @@ public class BaseApplication extends MultiDexApplication {
         MultiDex.install(this);
     }
 
-    /**
-     * ActivityLifecycleCallbacks
-     ************************************************************************************************************************************************/
-    private class MyActivityLifeCycleCallbacks implements ActivityLifecycleCallbacks {
-
-        private int runningCount = 0;
-
-        @Override
-        public void onActivityStarted(Activity activity) {
-            if(++runningCount == 1) {
-                appStatus = AppStatus.RETURNED_TO_FOREGROUND;
-            } else if(runningCount > 1) {
-                appStatus = AppStatus.FOREGROUND;
-            }
-        }
-
-        @Override
-        public void onActivityStopped(Activity activity) {
-            if(--runningCount == 0) {
-                appStatus = AppStatus.BACKGROUND;
-            }
-        }
-
-        @Override
-        public void onActivityCreated(Activity activity, Bundle savedInstanceState) {}
-
-        @Override
-        public void onActivityResumed(Activity activity) {}
-
-        @Override
-        public void onActivityPaused(Activity activity) {}
-
-        @Override
-        public void onActivitySaveInstanceState(Activity activity, Bundle outState) {}
-
-        @Override
-        public void onActivityDestroyed(Activity activity) {}
-    }
 }

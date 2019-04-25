@@ -35,6 +35,8 @@ import com.amazonaws.regions.Regions;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3Client;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 import com.fitmanager.app.R;
 import com.fitmanager.app.model.MemberVO;
 import com.fitmanager.app.network.RestService;
@@ -61,6 +63,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+
+import static com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade;
 
 public class ProfileEditActivity extends AppCompatActivity {
     private static final String TAG = "ProfileEditActivity";
@@ -399,11 +403,16 @@ public class ProfileEditActivity extends AppCompatActivity {
                 final Uri uri = data.getData();
 //                imgProfile.setImageURI(uri);
 
+
                 Glide.with(getApplicationContext())
                         .load(uri)
-                        .centerCrop()
-                        .bitmapTransform(new CropCircleTransformation(getApplicationContext()))
-                        .crossFade()
+                        .apply(new RequestOptions()
+                                .placeholder(R.drawable.placeholder)
+                                .bitmapTransform(new CropCircleTransformation(getApplicationContext()))
+                                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                                .skipMemoryCache(true)
+                                .centerCrop())
+                        .transition(withCrossFade())
                         .into(imgProfile);
 
 //                imgProfile.setImageBitmap(loadPicture());

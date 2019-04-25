@@ -13,6 +13,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 import com.fitmanager.app.R;
 import com.fitmanager.app.activity.MealDetailActivity;
 import com.fitmanager.app.model.MealVO;
@@ -22,6 +24,10 @@ import org.apache.commons.collections4.CollectionUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import jp.wasabeef.glide.transformations.CropCircleTransformation;
+
+import static com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade;
 
 public class BookmarkMealListAdapter extends RecyclerView.Adapter<BookmarkMealListAdapter.ViewHolder> {
     Context mContext;
@@ -55,10 +61,17 @@ public class BookmarkMealListAdapter extends RecyclerView.Adapter<BookmarkMealLi
     public void onBindViewHolder(final ViewHolder viewHolder, final int position) {
         final MealVO mealVO = mBookmarkMealList.get(position);
         if (mealVO != null) {
+
+
             Glide.with(mContext)
                     .load(mealVO.getImageUrl())
-                    .centerCrop()
-                    .crossFade()
+                    .apply(new RequestOptions()
+                            .placeholder(R.drawable.placeholder)
+                            .bitmapTransform(new CropCircleTransformation(mContext))
+                            .diskCacheStrategy(DiskCacheStrategy.NONE)
+                            .skipMemoryCache(true)
+                            .centerCrop())
+                    .transition(withCrossFade())
                     .into(viewHolder.img_meal);
 
             viewHolder.title.setText(mealVO.getTitle());
@@ -153,7 +166,6 @@ public class BookmarkMealListAdapter extends RecyclerView.Adapter<BookmarkMealLi
         }
         notifyDataSetChanged();
     }
-
 
 
     public List<MealVO> getSelectedItems() {

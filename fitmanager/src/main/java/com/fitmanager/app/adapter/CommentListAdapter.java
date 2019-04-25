@@ -17,6 +17,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 import com.fitmanager.app.R;
 import com.fitmanager.app.activity.CommentReplyActivity;
 import com.fitmanager.app.model.CommentVO;
@@ -26,6 +28,8 @@ import java.util.HashMap;
 import java.util.List;
 
 import jp.wasabeef.glide.transformations.CropCircleTransformation;
+
+import static com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade;
 
 public class CommentListAdapter extends RecyclerView.Adapter<CommentListAdapter.ViewHolder> {
 
@@ -68,9 +72,13 @@ public class CommentListAdapter extends RecyclerView.Adapter<CommentListAdapter.
 
         Glide.with(mContext)
                 .load(mCommentItems.get(position).getProfileImg())
-                .centerCrop()
-                .bitmapTransform(new CropCircleTransformation(mContext))
-                .crossFade()
+                .apply(new RequestOptions()
+                        .placeholder(R.drawable.placeholder)
+                        .bitmapTransform(new CropCircleTransformation(mContext))
+                        .diskCacheStrategy(DiskCacheStrategy.NONE)
+                        .skipMemoryCache(true)
+                        .centerCrop())
+                .transition(withCrossFade())
                 .into(viewHolder.imgProfile);
 
         viewHolder.imgComment.setOnClickListener(new View.OnClickListener() {

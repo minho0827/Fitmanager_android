@@ -15,6 +15,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 import com.fitmanager.app.R;
 import com.fitmanager.app.activity.VideoActivity;
 import com.fitmanager.app.fragment.PopularityVideoFragment;
@@ -24,6 +26,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import jp.wasabeef.glide.transformations.CropCircleTransformation;
+
+import static com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade;
 
 public class PopularityAdapter extends RecyclerView.Adapter<PopularityAdapter.ViewHolder> {
     private List<VideoVO> mVideoItems = new ArrayList<>();
@@ -86,19 +90,31 @@ public class PopularityAdapter extends RecyclerView.Adapter<PopularityAdapter.Vi
 
             final VideoVO videoVO = getItem(position);
             if (videoVO != null) {
+
+
                 Glide.with(mPopularityVideoFragment)
                         .load(videoVO.getProfileImg())
-                        .centerCrop()
-                        .bitmapTransform(new CropCircleTransformation(mPopularityVideoFragment.getContext()))
-                        .crossFade()
+                        .apply(new RequestOptions()
+                                .placeholder(R.drawable.placeholder)
+                                .bitmapTransform(new CropCircleTransformation(mPopularityVideoFragment.getContext()))
+                                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                                .skipMemoryCache(true)
+                                .centerCrop())
+                        .transition(withCrossFade())
                         .into(viewHolder.profileImg);
 
 
                 Glide.with(mPopularityVideoFragment)
                         .load(videoVO.getImageUrl())
-                        .centerCrop()
-                        .crossFade()
+                        .apply(new RequestOptions()
+                                .placeholder(R.drawable.placeholder)
+                                .bitmapTransform(new CropCircleTransformation(mPopularityVideoFragment.getContext()))
+                                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                                .skipMemoryCache(true)
+                                .centerCrop())
+                        .transition(withCrossFade())
                         .into(viewHolder.thumbnail);
+
 
                 viewHolder.tvTitle.setText(videoVO.getTitle());
 //                viewHolder.tvName.setText(videoVO.getName());

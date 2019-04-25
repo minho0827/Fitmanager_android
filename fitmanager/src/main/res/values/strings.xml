@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Fit Manager</string>
 
-    <string name="hello_world">Hello world!</string>
     <string name="login">로그인</string>
     <string name="coachName"> </string>
     <string name="feedtitle">님의 식단소식</string>
@@ -24,10 +23,7 @@
     <!---->
 
     <string name="home">홈</string>
-    <string name="menu_2">Menu 2</string>
     <string name="mypage">마이페이지</string>
-    <string name="menu_4">Menu 4</string>
-    <string name="menu_5">Menu 5</string>
     <string name="str_no">NO</string>
     <string name="facebook_app_id">1758671631129511</string>
     <string name="kakao_app_id">b7813d6607a15f5808fc5fbcd844bc9a</string>
@@ -75,7 +71,6 @@
     <string name="msg_not_notice">공지사항이 없습니다.</string>
     <string name="error_else_retry">요청한 작업에 실패하였습니다. 재시도할까요?</string>
 
-    <!--<string name="nav_action_posts">Posts</string>-->
     <string name="nav_action_photos">Photos</string>
     <string name="open_drawer">Open drawer</string>
     <string name="close_drawer">Close drawer</string>
@@ -89,7 +84,6 @@
     <string name="error_ecom02">수신자 정보를 확인하지 못하였습니다.</string>
     <string name="error_e00">요청한 작업에 실패하였습니다.</string>
     <string name="error_e001">사용자 정보를 확인하지 못하였습니다.</string>
-    <string name="error_e002">상점 정보를 확인하지 못하였습니다.</string>
     <string name="error_e003">이메일 or 핸드폰번호가 중복입니다.</string>
     <string name="error_e004">해당 ID가 존재하지 않습니다.</string>
 

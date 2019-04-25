@@ -1,6 +1,7 @@
 package com.fitmanager.app.network;
 
 import com.fitmanager.app.model.MemberVO;
+import com.fitmanager.app.model.ResultMessageVO;
 import com.fitmanager.app.model.VersionCheckVO;
 
 import java.util.List;
@@ -41,11 +42,18 @@ public interface MemberRestService {
 
 
   /**
-     * 식단등록 요청
+     * 코치 식단등록 요청
      ************************************************************************************************************************************************/
-    @GET("api/requestMealInsert")
-    Call<Integer> requestMealInsert(@QueryMap Map<String, Object> param);
+    @GET("api/requestCoachMealInsert")
+    Call<ResultMessageVO> requestCoachMealInsert(@QueryMap Map<String, Object> param);
 
+
+
+    /**
+     * 코치 비디오 등록 요청
+     ************************************************************************************************************************************************/
+    @GET("api/requestCoachVideoInsert")
+    Call<Integer> requestCoachVideoInsert(@QueryMap Map<String, Object> param);
 
 
 }

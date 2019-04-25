@@ -16,7 +16,7 @@ public class Constant {
      ************************************************************************************************************************************************/
     public static final String APP_KIND = "fitmanager";                                  // Applcation Kind
 
-    public static final String SERVER_ADDR = "http://192.168.0.186:8080/";
+    public static final String SERVER_ADDR = "http://172.20.10.5:8080/";
 //    public static final String SERVER_ADDR = "http://192.168.0.186:8080/";
     public static final String BUCKET_NAME = "s3testymh";
 //    public static final String PROFILE_UPLOAD_DIR = "profile";

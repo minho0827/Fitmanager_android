@@ -14,6 +14,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 import com.fitmanager.app.R;
 import com.fitmanager.app.model.BookmarkVO;
 import com.fitmanager.app.model.MealVO;
@@ -37,6 +39,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+
+import static com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade;
 
 public class MealDetailActivity extends AppCompatActivity implements BookmarkClickListener {
     private static FitProgressBar mProgressBar = new FitProgressBar();
@@ -268,17 +272,28 @@ public class MealDetailActivity extends AppCompatActivity implements BookmarkCli
                         tvCmtCount.setText(mealVO.getCommentCount() + "");
                         tvBookmarkCount.setText(mealVO.getBookmarkCount() + "");
                         tvContent.setText(mealVO.getContent());
+
+
                         Glide.with(getApplicationContext())
                                 .load(mealVO.getImageUrl())
-                                .centerCrop()
-                                .crossFade()
+                                .apply(new RequestOptions()
+                                        .placeholder(R.drawable.placeholder)
+                                        .bitmapTransform(new CropCircleTransformation(getApplicationContext()))
+                                        .diskCacheStrategy(DiskCacheStrategy.NONE)
+                                        .skipMemoryCache(true)
+                                        .centerCrop())
+                                .transition(withCrossFade())
                                 .into(mMealImgView);
 
                         Glide.with(getApplicationContext())
                                 .load(mealVO.getProfileImg())
-                                .centerCrop()
-                                .bitmapTransform(new CropCircleTransformation(getApplicationContext()))
-                                .crossFade()
+                                .apply(new RequestOptions()
+                                        .placeholder(R.drawable.placeholder)
+                                        .bitmapTransform(new CropCircleTransformation(getApplicationContext()))
+                                        .diskCacheStrategy(DiskCacheStrategy.NONE)
+                                        .skipMemoryCache(true)
+                                        .centerCrop())
+                                .transition(withCrossFade())
                                 .into(imgProfile);
                     }
 

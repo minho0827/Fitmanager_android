@@ -20,6 +20,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 import com.fitmanager.app.R;
 import com.fitmanager.app.model.BookmarkVO;
 import com.fitmanager.app.model.CoachVO;
@@ -43,6 +45,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+
+import static com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade;
 
 public class CoachInfomationActivity extends AppCompatActivity implements AppBarLayout.OnOffsetChangedListener {
     private static final String TAG = "CoachInfomationActivity";
@@ -304,12 +308,20 @@ public class CoachInfomationActivity extends AppCompatActivity implements AppBar
                     mainTvName.setText(coachVO.getCoachName());
 //                    coachBackground.setBackgroundResource(setDrawbleBackground(coachVO.getExerciseType()));
 //                    tvJob.setText(coachVO.getJob());
+
                     Glide.with(getApplicationContext())
                             .load(coachVO.getProfileImg())
-                            .centerCrop()
-                            .bitmapTransform(new CropCircleTransformation(getApplicationContext()))
-                            .crossFade()
+                            .apply(new RequestOptions()
+                                    .placeholder(R.drawable.placeholder)
+                                    .bitmapTransform(new CropCircleTransformation(mContext))
+                                    .diskCacheStrategy(DiskCacheStrategy.NONE)
+                                    .skipMemoryCache(true)
+                                    .centerCrop())
+                            .transition(withCrossFade())
                             .into(profileImg);
+
+
+
                     tvCareer.setText(coachVO.getCareer());
                     tvCertificate.setText(coachVO.getCertificate());
                     tvIntro.setText(coachVO.getIntro());

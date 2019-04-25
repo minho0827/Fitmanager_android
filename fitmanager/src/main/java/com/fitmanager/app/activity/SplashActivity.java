@@ -58,12 +58,7 @@ public class SplashActivity extends BaseActivity {
     private String strVersionCheck = null;                                                                         // App Version Check
 
 
-    //    private String strNoticeTitle;
-//    private String strNoticeMessage;
-//    private boolean noticeMessage = false;
-//    private String strIsKind;
     private String mStrVersionCheck = null;                                                                         // App Version Check
-    // App Version Infomation
 //    Y:공지사항 보이기 N:공지사항 감추기
     private String strIsShow = "N";
 
@@ -110,7 +105,8 @@ public class SplashActivity extends BaseActivity {
      */
     private void requestLogin(Map<String, Object> param) {
 
-        Call<MemberVO> requestLoginCall = RetroUtil.createService(Constant.SERVER_ADDR, MemberRestService.class).getLoginMember(param);
+        Call<MemberVO> requestLoginCall = RetroUtil.createService
+                (Constant.SERVER_ADDR, MemberRestService.class).getLoginMember(param);
 
         requestLoginCall.enqueue(new Callback<MemberVO>() {
             @Override

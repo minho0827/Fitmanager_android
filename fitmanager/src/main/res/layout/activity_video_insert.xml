@@ -1,0 +1,665 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <!-- 첫번째 카메라 아이콘 이미지 -->
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/img_camera"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@color/gray"
+                        android:padding="30dp"
+                        android:src="@drawable/camera" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_gallery_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:padding="5dp"
+                        android:text="0/8"
+                        android:textColor="@color/white"
+                        android:textSize="10dp"
+                        app:fontPath="fonts/NanumSquareOTFBold.otf" />
+
+                </FrameLayout>
+
+
+                <ImageView
+                    android:id="@+id/img_01"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/white"
+                    android:padding="30dp"
+                    android:visibility="gone" />
+
+
+                <ImageView
+                    android:id="@+id/img_02"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/white"
+                    android:padding="30dp"
+                    android:visibility="gone" />
+
+
+                <ImageView
+                    android:id="@+id/img_03"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/white"
+                    android:padding="30dp"
+                    android:visibility="gone" />
+
+
+                <ImageView
+                    android:id="@+id/img_04"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/white"
+                    android:padding="30dp"
+                    android:visibility="gone" />
+
+
+                <ImageView
+                    android:id="@+id/img_05"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/white"
+                    android:padding="30dp"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/edit_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_border"
+                android:ems="10"
+                android:hint="영상 제목 "
+                android:padding="10dp"
+                android:textSize="15dp"
+                app:fontPath="fonts/NanumSquareOTFLight.otf" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="3dp"
+                    android:paddingTop="3dp"
+                    android:text="운동 종류"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <ToggleButton
+                    android:id="@+id/tvPilates"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:textOff="필라테스"
+                    android:tag="1"
+                    android:textOn="필라테스"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:text="필라테스"
+                    android:textColor="@color/white" />
+
+
+                <ToggleButton
+                    android:id="@+id/btnYoga"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="0.25"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:tag="2"
+                    android:textOff="요가"
+                    android:textOn="요가"
+                    android:text="요가"
+                    android:textColor="@color/white" />
+
+
+                <ToggleButton
+                    android:id="@+id/tvWeightTR"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="0.25"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:textOff="웨이트"
+                    android:textOn="웨이트"
+                    android:text="웨이트"
+                    android:tag="3"
+                    android:textColor="@color/white" />
+
+                <ToggleButton
+                    android:id="@+id/tvBalletfits"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="0.25"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:tag="4"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:textOff="발레핏"
+                    android:textOn="발레핏"
+                    android:text="발레핏"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+
+                <ToggleButton
+                    android:id="@+id/tvHomeTR"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:textOff="홈트"
+                    android:textOn="홈트"
+                    android:text="홈트"
+                    android:tag="5"
+                    android:textColor="@color/white" />
+
+
+                <ToggleButton
+                    android:id="@+id/tv_crossfit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:tag="6"
+                    android:textOff="크로스핏"
+                    android:textOn="크로스핏"
+                    android:text="크로스핏"
+                    android:textColor="@color/white" />
+
+
+                <ToggleButton
+                    android:id="@+id/tv_body_correction"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:tag="7"
+                    android:textOff="체형교정"
+                    android:textOn="체형교정"
+                    android:text="체형교정"
+                    android:textColor="@color/white" />
+
+
+                <ToggleButton
+                    android:id="@+id/tv_postpartum"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:tag="9"
+                    android:paddingTop="20dp"
+                    android:textOff="산전산후"
+                    android:textOn="산전산후"
+                    android:text="산전산후"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+
+                <ToggleButton
+                    android:id="@+id/togg_btn_paul_dance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.25"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:textOff="홈트"
+                    android:textOn="홈트"
+                    android:text="홈트"
+                    android:tag="5"
+                    android:textColor="@color/white" />
+
+
+                <ToggleButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="0.25"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:visibility="invisible"
+                    android:textColor="@color/white" />
+
+
+                <ToggleButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.25"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:visibility="invisible"
+                    android:textColor="@color/white" />
+
+
+                <ToggleButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.25"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:tag="9"
+                    android:paddingTop="20dp"
+                    android:visibility="invisible"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/gray">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="3dp"
+                    android:paddingTop="3dp"
+                    android:text="부위선택"
+                    android:textColor="@color/white"
+                    app:fontPath="fonts/NanumSquareOTFLight.otf" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <ToggleButton
+                    android:id="@+id/tv_sholder"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:text="어깨"
+                    android:textOn="어깨"
+                    android:textOff="어깨"
+                    android:textColor="@color/white" />
+
+
+                <ToggleButton
+                    android:id="@+id/tv_stomach"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="0.25"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:text="복근"
+                    android:textOn="복근"
+                    android:textOff="복근"
+                    android:textColor="@color/white" />
+
+
+                <ToggleButton
+                    android:id="@+id/tv_chest"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.25"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:text="가슴"
+                    android:textOn="가슴"
+                    android:textOff="가슴"
+                    android:textColor="@color/white" />
+
+
+                <ToggleButton
+                    android:id="@+id/tv_thigh"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:text="허벅지"
+                    android:textOn="허벅지"
+                    android:textOff="허벅지"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <ToggleButton
+                    android:id="@+id/tv_arm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:text="팔"
+                    android:textOn="팔"
+                    android:textOff="팔"
+                    android:textColor="@color/white" />
+
+
+                <ToggleButton
+                    android:id="@+id/tv_body"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="0.25"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:text="전신"
+                    android:textOn="전신"
+                    android:textOff="전신"
+                    android:textColor="@color/white" />
+
+
+                <ToggleButton
+                    android:id="@+id/tv_hip"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.25"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:text="엉덩이"
+                    android:textOn="엉덩이"
+                    android:textOff="엉덩이"
+                    android:textColor="@color/white" />
+
+
+                <ToggleButton
+                    android:id="@+id/tv_waist"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:text="허리"
+                    android:textOn="허리"
+                    android:textOff="허리"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/tvCalf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="0.25"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:textOn="종아리"
+                    android:textOff="종아리"
+                    android:text="종아리"
+                    android:textColor="@color/white" />
+
+
+                <TextView
+                    android:id="@+id/tvBodyBack"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="0.25"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:text="등"
+                    android:textOn="등"
+                    android:textOff="등"
+                    android:textColor="@color/white" />
+
+
+                <TextView
+                    android:id="@+id/tvBackstab"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.25"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:text="뒷태"
+                    android:textOn="뒷태"
+                    android:textOff="뒷태"
+                    android:textColor="@color/white" />
+
+
+                <TextView
+                    android:id="@+id/tvLowBody"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:textOn="하체"
+                    android:textOff="하체"
+                    android:text="하체"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/edit_video_content"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_border"
+                android:ems="10"
+                android:gravity="left"
+                android:hint="내용작성"
+                android:padding="10dp"
+                android:textSize="15dp"
+                app:fontPath="fonts/NanumSquareOTFBold.otf"></android.support.v7.widget.AppCompatEditText>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_insert"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_button_height"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/str_insert"
+                android:textColor="@color/C_FFFFFF"
+                android:textSize="17.5dp"
+                app:fontPath="fonts/NanumSquareOTFBold.otf" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
